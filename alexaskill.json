@@ -1,0 +1,580 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "kitchen helper",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "RecommendationIntent",
+                    "slots": [
+                        {
+                            "name": "mainIngredient",
+                            "type": "AMAZON.Food",
+                            "samples": [
+                                "have {mainIngredient}",
+                                "why not have {mainIngredient} ",
+                                "make the main ingredient {mainIngredient}",
+                                "i want the main ingredient to be {mainIngredient}",
+                                "the main ingredient should be {mainIngredient}",
+                                "show me {mainIngredient} recipes",
+                                "let's have {mainIngredient}",
+                                "{mainIngredient} should be the main ingredient",
+                                "recipes involving {mainIngredient} please",
+                                "recipes involving {mainIngredient} ",
+                                "{mainIngredient} recipes",
+                                "i want {mainIngredient} recipes",
+                                "look for {mainIngredient}",
+                                "try {mainIngredient}",
+                                "why not {mainIngredient}",
+                                "how about {mainIngredient}",
+                                "{mainIngredient}"
+                            ]
+                        },
+                        {
+                            "name": "secondIngredient",
+                            "type": "AMAZON.Food"
+                        },
+                        {
+                            "name": "course",
+                            "type": "CourseType",
+                            "samples": [
+                                "{course} only",
+                                "only {course} ",
+                                "i want {course} ideas",
+                                "give me {course} ideas",
+                                "how about {course}",
+                                "{course}"
+                            ]
+                        },
+                        {
+                            "name": "holiday",
+                            "type": "HolidayType"
+                        },
+                        {
+                            "name": "allergy",
+                            "type": "AllergyType"
+                        },
+                        {
+                            "name": "diet",
+                            "type": "DietType"
+                        },
+                        {
+                            "name": "cuisine",
+                            "type": "CuisineType"
+                        }
+                    ],
+                    "samples": [
+                        "what can i make with these ingredients",
+                        "what should i eat",
+                        "recommend a recipe"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NextIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.YesIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NoIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.RepeatIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.PauseIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.ResumeIntent",
+                    "samples": []
+                }
+            ],
+            "types": [
+                {
+                    "name": "AllergyType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "wheat"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "tree nut"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sulfite"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "soy"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "sesame"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "seafood"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "peanut"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gluten"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "egg"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "dairy"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "DietType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "none",
+                                "synonyms": [
+                                    "no",
+                                    "neither",
+                                    "nothing"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vegetarian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vegan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pescetarian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ovo vegetarian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lacto vegetarian"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "HolidayType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "4th of July",
+                                "synonyms": [
+                                    "Independence Day"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hanukkah"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Halloween"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Super Bowl",
+                                "synonyms": [
+                                    "Sports",
+                                    "Football",
+                                    "Game Day"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": " New Year"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thanksgiving"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Summer"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Christmas"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CuisineType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Portugese"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hungarian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Swedish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Hawaiin"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cuban"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Japanese"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Irish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Moroccan"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Thai"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "German"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Spanish"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Greek"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mediterranean"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "English"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Cajun",
+                                "synonyms": [
+                                    "Creole"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Chinese"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Indian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Barbecue"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Southwestern"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "French"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Southern"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Mexican"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Asian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Italian"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "American",
+                                "synonyms": [
+                                    "Soul"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CourseType",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Cocktails"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Condiments",
+                                "synonyms": [
+                                    "Sauces"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Beverages"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Soups"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Breakfast",
+                                "synonyms": [
+                                    "Brunch"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Breads"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Salads"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Appetizers",
+                                "synonyms": [
+                                    "Snacks"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Lunch"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Side Dishes"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Desserts"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Main Dishes",
+                                "synonyms": [
+                                    "supper",
+                                    "dinner"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "RecommendationIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "mainIngredient",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Intent-RecommendationIntent.IntentSlot-mainIngredient",
+                                "elicitation": "Elicit.Intent-RecommendationIntent.IntentSlot-mainIngredient"
+                            }
+                        },
+                        {
+                            "name": "secondIngredient",
+                            "type": "AMAZON.Food",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "course",
+                            "type": "CourseType",
+                            "confirmationRequired": true,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "confirmation": "Confirm.Intent-RecommendationIntent.IntentSlot-course",
+                                "elicitation": "Elicit.Intent-RecommendationIntent.IntentSlot-course"
+                            }
+                        },
+                        {
+                            "name": "holiday",
+                            "type": "HolidayType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "allergy",
+                            "type": "AllergyType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "diet",
+                            "type": "DietType",
+                            "confirmationRequired": true,
+                            "elicitationRequired": false,
+                            "prompts": {
+                                "confirmation": ""
+                            }
+                        },
+                        {
+                            "name": "cuisine",
+                            "type": "CuisineType",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ]
+        },
+        "prompts": [
+            {
+                "id": "Confirm.Intent-RecommendationIntent.IntentSlot-mainIngredient",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I heard {mainIngredient} as the main ingredient. Was that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-RecommendationIntent.IntentSlot-mainIngredient",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please specify your main ingredient."
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent-RecommendationIntent.IntentSlot-course",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "I heard {course}. Is that correct?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Intent-RecommendationIntent.IntentSlot-course",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Please say your meal's course. You can say breakfast, lunch or dinner."
+                    }
+                ]
+            }
+        ]
+    }
+}
