@@ -521,7 +521,7 @@
                         {
                             "name": "diet",
                             "type": "DietType",
-                            "confirmationRequired": true,
+                            "confirmationRequired": false,
                             "elicitationRequired": false,
                             "prompts": {
                                 "confirmation": ""
